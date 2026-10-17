@@ -2,6 +2,7 @@ import React from 'react';
 import { HeroVisual } from '../components/HeroVisual';
 import { TechMarquee } from '../components/TechMarquee';
 import { FortrixLogo } from '../components/FortrixLogo';
+import { ProjectImage } from '../components/ProjectImage';
 import {
   AGENCY_PROJECTS,
   AGENCY_SERVICES,
@@ -286,13 +287,13 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                     isEven ? 'order-1 lg:order-2' : ''
                   }`}
                 >
-                  <img
+                  <ProjectImage
                     alt={proj.title}
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                     src={proj.image}
+                    fallbackSrc={proj.fallbackImage || `/images/${proj.id}_preview.jpg`}
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a1c1e] via-transparent to-transparent opacity-60" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a1c1e] via-transparent to-transparent opacity-60 pointer-events-none" />
                 </div>
 
                 {/* Content Column */}

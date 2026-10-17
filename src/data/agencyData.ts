@@ -1,3 +1,8 @@
+import tradebullkingImg from '../assets/images/tradebullking_preview_1792217720435.jpg';
+import aurumImg from '../assets/images/aurum_preview_1792217721325.jpg';
+import aegisImg from '../assets/images/aegis_preview_1792217721492.jpg';
+import checkoutImg from '../assets/images/checkout_preview_1792217722064.jpg';
+
 export interface Project {
   id: string;
   number: string;
@@ -7,6 +12,7 @@ export interface Project {
   tagline: string;
   description: string;
   image: string;
+  fallbackImage?: string;
   tags: string[];
   metrics: { label: string; value: string }[];
   architecture: {
@@ -63,7 +69,8 @@ export const AGENCY_PROJECTS: Project[] = [
     year: "2024",
     tagline: "High-frequency multi-asset trading terminal",
     description: "Sub-millisecond order execution console featuring responsive real-time WebSockets, depth chart visualizers, risk parameter simulators, and multi-asset account balances.",
-    image: "/src/assets/images/tradebullking_preview_1792217720435.jpg",
+    image: tradebullkingImg,
+    fallbackImage: "/images/tradebullking_preview.jpg",
     tags: ["Next.js 14", "WebSockets", "Rust Engine", "Canvas API", "Redis Pub/Sub"],
     metrics: [
       { label: "Execution Latency", value: "< 1.8ms" },
@@ -94,7 +101,8 @@ export const AGENCY_PROJECTS: Project[] = [
     year: "2024",
     tagline: "Autonomous enterprise operations command center",
     description: "Enterprise operations command center integrating revenue cohort analytics, task pipeline kanbans, cross-team capacity planning, and live contract qualification pipelines.",
-    image: "/src/assets/images/aurum_preview_1792217721325.jpg",
+    image: aurumImg,
+    fallbackImage: "/images/aurum_preview.jpg",
     tags: ["React", "PostgreSQL", "GraphQL", "Tailwind", "D3.js"],
     metrics: [
       { label: "Active Enterprise Seats", value: "8,500+" },
@@ -125,7 +133,8 @@ export const AGENCY_PROJECTS: Project[] = [
     year: "2024",
     tagline: "Autonomous enterprise cognitive graph pipeline",
     description: "Autonomous cognitive graph pipeline automating enterprise prompt verification, embedding cluster indexing, vector token throttling, and model failover arbitration.",
-    image: "/src/assets/images/aegis_preview_1792217721492.jpg",
+    image: aegisImg,
+    fallbackImage: "/images/aegis_preview.jpg",
     tags: ["Python FastAPI", "LangChain", "Qdrant Vector DB", "Node Flow UI", "OpenAI & Claude"],
     metrics: [
       { label: "Tokens Processed", value: "4.2B/month" },
@@ -156,7 +165,8 @@ export const AGENCY_PROJECTS: Project[] = [
     year: "2024",
     tagline: "Sub-second distributed checkout engine",
     description: "High-concurrency headless store architecture engineered for flash-sale volumes, sub-second checkout loops, automated inventory balancing, and multi-currency routing.",
-    image: "/src/assets/images/checkout_preview_1792217722064.jpg",
+    image: checkoutImg,
+    fallbackImage: "/images/checkout_preview.jpg",
     tags: ["Kubernetes", "Golang Microservices", "Redis Cache", "AWS ECS", "Stripe Connect"],
     metrics: [
       { label: "Peak TPS Handled", value: "28,400 TPS" },

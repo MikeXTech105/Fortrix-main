@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AGENCY_PROJECTS, Project } from '../data/agencyData';
+import { ProjectImage } from '../components/ProjectImage';
 
 interface WorkScreenProps {
   onSelectProject: (project: Project) => void;
@@ -78,13 +79,13 @@ export const WorkScreen: React.FC<WorkScreenProps> = ({
                   isEven ? 'order-1 lg:order-2' : ''
                 }`}
               >
-                <img
+                <ProjectImage
                   alt={proj.title}
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
                   src={proj.image}
+                  fallbackSrc={proj.fallbackImage || `/images/${proj.id}_preview.jpg`}
+                  className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1c1e] via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1c1e] via-transparent to-transparent opacity-60 pointer-events-none" />
               </div>
 
               <div

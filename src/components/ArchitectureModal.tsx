@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Project } from '../data/agencyData';
+import { ProjectImage } from './ProjectImage';
 
 interface ArchitectureModalProps {
   project: Project | null;
@@ -176,13 +177,13 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({
             <div className="space-y-6">
               {/* Architecture Screenshot Preview */}
               <div className="w-full h-52 md:h-72 rounded-xl overflow-hidden border border-[#333537] relative group bg-[#0c0e10]">
-                <img
+                <ProjectImage
                   src={project.image}
+                  fallbackSrc={project.fallbackImage || `/images/${project.id}_preview.jpg`}
                   alt={project.title}
-                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#121416] via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#121416] via-transparent to-transparent opacity-60 pointer-events-none" />
                 <div className="absolute bottom-3 left-4 flex items-center gap-2 font-label-tech text-[10px] text-[#b0f753] bg-[#0c0e10]/85 px-3 py-1 rounded-full backdrop-blur-sm border border-[#333537]">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#b0f753] animate-pulse" />
                   <span>PRODUCTION INTERFACE SNAPSHOT</span>
