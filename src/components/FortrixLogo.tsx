@@ -9,6 +9,7 @@ interface FortrixLogoProps {
 
 export const FortrixLogo: React.FC<FortrixLogoProps> = ({
   size = 'md',
+  variant = 'brand',
   iconOnly = false,
   className = '',
 }) => {
@@ -41,8 +42,9 @@ export const FortrixLogo: React.FC<FortrixLogoProps> = ({
   };
 
   const current = config[size];
+  const primaryColor = variant === 'white' ? '#FFFFFF' : '#b0f753';
 
-  // Clean geometric diamond emblem with monogram F
+  // Authentic Fortrix diamond emblem
   const emblem = (
     <div
       className={`${current.iconSize} shrink-0 relative flex items-center justify-center select-none`}
@@ -51,29 +53,31 @@ export const FortrixLogo: React.FC<FortrixLogoProps> = ({
         viewBox="0 0 100 100"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-full drop-shadow-[0_0_12px_rgba(255,255,255,0.15)]"
+        className={`w-full h-full ${
+          variant === 'white'
+            ? 'drop-shadow-[0_0_12px_rgba(255,255,255,0.2)]'
+            : 'drop-shadow-[0_0_12px_rgba(176,247,83,0.35)]'
+        }`}
       >
-        {/* Outer Rotated Rounded Diamond */}
-        <rect
-          x="20"
-          y="20"
-          width="60"
-          height="60"
-          rx="12"
-          transform="rotate(45 50 50)"
-          fill="#FFFFFF"
-        />
-        {/* Architectural Cutout Sculpting Monogram 'F' */}
+        {/* Outer smoothed diamond shield */}
         <path
-          d="M50 24 L68 42 L60 50 L52 42 V70 H42 V24 H50 Z"
+          d="M50 4 L94 48 C96 50 96 52 94 54 L52 96 C50 98 48 98 46 96 L6 56 C4 54 4 52 6 50 L46 6 C48 4 50 4 50 4 Z"
+          fill={primaryColor}
+        />
+        {/* Monogram architectural F cut */}
+        <path
+          d="M48 20 L76 48 L64 60 L48 44 V78 H34 V20 H48 Z"
           fill="#0c0e10"
         />
-        <path
-          d="M42 46 H58 V53 H42 Z"
-          fill="#FFFFFF"
+        {/* Apex precision accent */}
+        <rect
+          x="47"
+          y="9"
+          width="6"
+          height="6"
+          transform="rotate(45 50 12)"
+          fill="#0c0e10"
         />
-        {/* High-tech apex accent dots */}
-        <circle cx="50" cy="19" r="2.5" fill="#0c0e10" />
       </svg>
     </div>
   );
