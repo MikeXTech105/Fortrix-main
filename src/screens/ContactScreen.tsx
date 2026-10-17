@@ -103,11 +103,11 @@ export const ContactScreen: React.FC<ContactScreenProps> = ({ onSaveInquiry }) =
               <div>
                 <span className="text-[#8c947d] text-xs block uppercase mb-1">Official Studio Email</span>
                 <a
-                  href="mailto:fortrixinfotech@gmail.com"
+                  href="mailto:info@fortrixinfotech.in"
                   className="text-white hover:text-[#b0f753] text-base font-semibold transition-colors flex items-center gap-2 group"
                 >
                   <span className="material-symbols-outlined text-sm text-[#b0f753]">mail</span>
-                  <span>fortrixinfotech@gmail.com</span>
+                  <span>info@fortrixinfotech.in</span>
                 </a>
               </div>
 

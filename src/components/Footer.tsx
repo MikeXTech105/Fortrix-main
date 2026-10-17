@@ -113,10 +113,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenLetstalk }) =>
                 Surat / Ahmedabad / Global
               </span>
               <a
-                href="mailto:fortrixinfotech@gmail.com"
+                href="mailto:info@fortrixinfotech.in"
                 className="font-label-tech text-xs text-[#b0f753] hover:underline mt-1 transition-colors block"
               >
-                fortrixinfotech@gmail.com
+                info@fortrixinfotech.in
               </a>
             </div>
           </div>

@@ -158,8 +158,8 @@ export const ClientInquiriesDrawer: React.FC<ClientInquiriesDrawerProps> = ({
               </div>
               <div className="flex items-center justify-between pt-1 border-t border-[#333537]/40">
                 <span className="text-[#8c947d] text-xs">Direct Channel:</span>
-                <a href="mailto:fortrixinfotech@gmail.com" className="text-[#b0f753] hover:underline font-mono">
-                  fortrixinfotech@gmail.com
+                <a href="mailto:info@fortrixinfotech.in" className="text-[#b0f753] hover:underline font-mono">
+                  info@fortrixinfotech.in
                 </a>
               </div>
             </div>
@@ -173,7 +173,7 @@ export const ClientInquiriesDrawer: React.FC<ClientInquiriesDrawerProps> = ({
         {/* Footer */}
         <div className="p-6 border-t border-[#333537] bg-[#1a1c1e]">
           <a
-            href="mailto:fortrixinfotech@gmail.com"
+            href="mailto:info@fortrixinfotech.in"
             className="w-full py-2.5 rounded-full bg-[#b0f753] text-[#102000] font-label-caps text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 hover:opacity-95 transition-opacity"
           >
             <span>Email Founder Directly</span>

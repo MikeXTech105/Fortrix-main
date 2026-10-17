@@ -306,7 +306,7 @@ export const AGENCY_FOUNDERS: Founder[] = [
     focusAreas: ["Product Architecture", "Enterprise Workflow Automation", "UI/UX Systems", "Go-To-Market Execution", "SaaS Growth Ergonomics", "Distributed Cloud Infrastructure"],
     linkedin: "https://www.linkedin.com/company/fortrix-infotech",
     github: "https://github.com/MikeXTech105",
-    email: "fortrixinfotech@gmail.com"
+    email: "info@fortrixinfotech.in"
   }
 ];
 

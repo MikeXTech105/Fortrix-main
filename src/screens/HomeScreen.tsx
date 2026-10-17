@@ -571,9 +571,9 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
                 </button>
                 <a
                   className="font-label-tech text-sm text-[#e2e2e5] hover:text-[#b0f753] tracking-wider transition-colors underline underline-offset-8 decoration-[#333537]"
-                  href="mailto:fortrixinfotech@gmail.com"
+                  href="mailto:info@fortrixinfotech.in"
                 >
-                  fortrixinfotech@gmail.com
+                  info@fortrixinfotech.in
                 </a>
               </div>
             </div>

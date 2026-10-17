@@ -284,7 +284,7 @@ Generated via Fortrix Studio Engine.`;
 
                 <div className="flex items-center gap-3">
                   <a
-                    href="mailto:fortrixinfotech@gmail.com?subject=Project%20Discovery%20Call"
+                    href="mailto:info@fortrixinfotech.in?subject=Project%20Discovery%20Call"
                     className="px-5 py-2 rounded-full bg-[#b0f753] text-[#102000] font-label-caps text-xs font-semibold uppercase tracking-wider hover:opacity-95 transition-opacity"
                   >
                     Schedule Direct Discovery Call →
